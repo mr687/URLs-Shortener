@@ -1,5 +1,4 @@
-const form = document.querySelector('form')
-const generateButton = document.querySelector('form button')
+const generateButton = document.getElementById('generateButton')
 const errorMessage = document.getElementById('errorMessage')
 const successMessage = document.getElementById('successMessage')
 const inputUrl = document.getElementById('inputUrl')
@@ -36,8 +35,7 @@ const onError = (error) => {
   displayForm(true)
 }
 
-form.addEventListener('submit', async (ev) => {
-  ev.preventDefault()
+generateButton.addEventListener('click', async () => {
   displayForm(false)
 
   const url = inputUrl.value

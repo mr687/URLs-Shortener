@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
 
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -23,13 +25,11 @@
     <div class="card">
       <div id="successMessage">{success: created}</div>
       <div id="errorMessage">{error: duplicate slug}</div>
-      <form action="">
-        <input id="inputUrl" type="text" name="link" placeholder="enter a url" required>
-        <input id="inputSlug" type="text" name="slug" placeholder="enter a slug">
-        <div class="center">
-          <button type="submit">generate</button>
-        </div>
-      </form>
+      <input id="inputUrl" type="text" name="link" placeholder="enter a url" required>
+      <input id="inputSlug" type="text" name="slug" placeholder="enter a slug">
+      <div class="center">
+        <button id="generateButton" type="button">generate</button>
+      </div>
     </div>
   </main>
 
