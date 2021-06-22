@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <title>Lnk - URLs Wrapper</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="vh-center">
+    <header>
+      <img src="./logo.png" alt="lnk.ngoder.com">
+    </header>
+
+    <div class="card">
+      <div id="successMessage">{success: created}</div>
+      <div id="errorMessage">{error: duplicate slug}</div>
+      <form action="">
+        <input id="inputUrl" type="text" name="link" placeholder="enter a url" required>
+        <input id="inputSlug" type="text" name="slug" placeholder="enter a slug">
+        <div class="center">
+          <button type="submit">generate</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
