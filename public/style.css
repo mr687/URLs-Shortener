@@ -62,6 +62,10 @@ button:hover {
   min-height: 100vh;
 }
 
+.p-color{
+  color: #0000ff;
+}
+
 #errorMessage,
 #successMessage {
   text-align: center;

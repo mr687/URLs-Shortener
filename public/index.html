@@ -18,18 +18,37 @@
 
 <body>
   <main class="vh-center">
-    <header>
-      <img src="./logo.png" alt="lnk.ngoder.com">
-    </header>
-
-    <div class="card">
-      <div id="successMessage">{success: created}</div>
-      <div id="errorMessage">{error: duplicate slug}</div>
-      <input id="inputUrl" type="text" name="link" placeholder="enter a url" required>
-      <input id="inputSlug" type="text" name="slug" placeholder="enter a slug">
-      <div class="center">
-        <button id="generateButton" type="button">generate</button>
+    <div id="lnk">
+      <header>
+        <img src="./logo.png" alt="lnk.ngoder.com">
+      </header>
+  
+      <div class="card">
+        <div id="successMessage">{success: created}</div>
+        <div id="errorMessage">{error: duplicate slug}</div>
+        <input id="inputUrl" type="text" name="link" placeholder="enter a url" required>
+        <input id="inputSlug" type="text" name="slug" placeholder="enter a slug">
+        <div class="center">
+          <button id="generateButton" type="button">generate</button>
+        </div>
       </div>
+    </div>
+    <div class="errorViews" style="display: none;">
+      <h1>ReferenceError: Cannot access link</h1>
+      <div style="margin-left: 2rem;margin-top: 1rem;color: #a4a4a4;max-width: 500px;">
+        <p style="text-indent: 2em;">at App.valid (/Space/Mars/dev/lnk.ngoder.com/index.js:1:1)</p>
+        <p style="text-indent: 2em;">at Object.execute (/Space/Mars/dev/qonfusee.com/index.js:2:2) <br></p>
+        <p style="text-indent: 2em;">at Object.execute (/Space/Mars/dev/qonfusee.com/index.js:3:3) <br></p>
+        <p style="text-indent: 2em;">at Client.module.exports (/Space/Mars/dev/qonfusee.com/index.js:4:4) <br></p>
+        <p style="text-indent: 2em;">at runMicrotasks (<anonymous>)</p>
+      </div>
+    </div>
+    <div class="errorViews" style="display: none;">
+      <h1>you found nothing</h1>
+    </div>
+    <div class="errorViews" style="display: none;">
+      <h1><span class="p-color">[</span>oops..<span class="p-color">]</span></h1>
+      <p style="margin-top: 1rem;">the link might be eaten by Python3 🐍.</p>
     </div>
   </main>
 

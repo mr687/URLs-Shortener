@@ -60,6 +60,18 @@ generateButton.addEventListener('click', async () => {
   }
 })
 
+const checkQuery = () => {
+  const params = new URLSearchParams(window.location.search)
+  const views = document.querySelectorAll('.errorViews')
+  const randInt = Math.floor(Math.random() * views.length)
+  const view = views[randInt]
+  if (params.has('error')) {
+    view.style.display = 'block'
+    document.getElementById('lnk').style.display = 'none'
+  }
+}
+
 (() => {
   clearForm()
+  checkQuery()
 })()
