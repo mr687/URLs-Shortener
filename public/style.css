@@ -80,3 +80,8 @@ button:hover {
 #errorMessage {
   color: rgb(238, 61, 61);
 }
+
+footer{
+  margin-top: 3rem;
+  color: green;
+}
